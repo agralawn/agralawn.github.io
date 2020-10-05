@@ -1,0 +1,12 @@
+*+html{overflow:auto;}
+#form1 input ,
+#form1 textarea,
+#form1 .success,
+.link1,
+.input1,
+.button1,
+.button2,
+.sf-menu li,
+#news-form input,
+#news-form .success {behavior:url(js/PIE.htc);position:relative}
+

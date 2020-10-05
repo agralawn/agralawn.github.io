@@ -1,0 +1,176 @@
+/*** MENU ***/
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+
+
+nav {
+    border-bottom: 1px solid #474745;
+    padding-left: 85px;
+    padding-top: 46px;
+    width: 100%;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+
+.sf-menu {
+	line-height:	1.0;
+	
+}
+.sf-menu li {
+	float:			left;
+	margin-right:15px;
+	border-radius:16px 16px 0 0;
+	background:url(../images/bg-15.png) repeat 0 0;
+	position:		relative;
+	display:inline;
+}
+.sf-menu a {
+	display:		block;
+	font-family: 'News Cycle', sans-serif;
+	color:#fff;
+	text-transform:uppercase;
+	padding:19px 28px 22px;
+	font-size:18px;
+	line-height:22px;
+	position:		relative;
+}
+
+.sf-menu li:hover,
+.sf-menu li.current,
+.sf-menu li.sfHover {
+	background:#fff;
+}
+
+.sf-menu ul li:hover,
+.sf-menu ul li.current,
+.sf-menu ul li.sfHover {
+	background:none;
+}
+
+.sf-menu li:hover>a,
+.sf-menu li.current>a,
+.sf-menu li.sfHover>a {
+	color:#202020;
+	text-decoration:none;
+}
+
+.sf-menu ul li:hover a,
+.sf-menu ul li.sfHover>a {
+	color:#919191;
+	background:url(../images/menu-hov.gif) repeat 0 0;
+	text-decoration:none;
+}
+
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			132px; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul ul{	
+	width:			172px; /* left offset of submenus need to match (see below) */
+}
+
+.sf-menu ul li {
+	width:			100%;
+	margin:0;
+	border-radius:0;
+	background:none;
+}
+.sf-menu ul a {
+	color:#cac5bd;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	line-height:16px;
+	text-transform:none;
+	background:url(../images/menu-bg.gif) repeat 0 0;
+	padding:12px 12px 8px 33px;
+}
+.sf-menu ul ul a {
+	padding:12px 12px 8px 33px;
+}
+
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			63px; /* match top ul list item height */
+	z-index:		99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			132px; /* match ul width */
+	top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+.sf-menu li.sub-menu:after {
+    background: url("../images/indicator.png") no-repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 4px;
+    right: 49%;
+    top: 77%;
+    margin-top: -1px;
+    position: absolute;
+    width: 6px;
+}
+
+
+.sf-menu ul li.sub-menu:after {	
+	right: 10%;
+    top: 48%;
+}
+
+
+/* Design for a width of 768px */
+@media only screen and (max-width: 995px) {
+
+	
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+
+nav select {
+    display: block !important;
+    height: 23px;
+    line-height: 23px;
+    outline: medium none;
+    padding: 0;
+    width: 100%;
+}
+
+nav span,
+.sf-menu{display:none}
+
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {	
+nav span,
+.sf-menu{display:none}
+ 
+}
